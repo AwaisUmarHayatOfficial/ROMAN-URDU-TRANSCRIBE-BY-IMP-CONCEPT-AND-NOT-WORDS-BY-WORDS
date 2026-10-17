@@ -14,6 +14,23 @@
 #    ./Run.sh
 # =============================================================================
 
+# 1. Update the package list and install system dependencies
+sudo apt update
+sudo apt install -y python3 python3-venv python3-pip ffmpeg git
+
+# 2. Clone the repository and enter the project folder
+#git clone https://github.com/AwaisUmarHayatOfficial/ROMAN-URDU-TRANSCRIBE.git
+#cd ROMAN-URDU-TRANSCRIBE
+
+# 3. Create and activate a virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# 4. Install the Python packages
+pip install --upgrade pip
+pip install python-docx google-genai requests youtube-transcript-api yt-dlp
+
+
 # ----------------------------- Configuration ---------------------------------
 # Folder where this script lives (auto-detected, follows symlinks).
 SCRIPT_PATH="$(readlink -f "${BASH_SOURCE[0]}")"
