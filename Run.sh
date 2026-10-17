@@ -179,7 +179,7 @@ get_api_key() {
   fi
 
   while true; do
-    read -r -s -p "Paste your Gemini API key (input is hidden): " API_KEY
+    read -r -p "Paste your Gemini API key (input is not hidden): " API_KEY
     echo
     API_KEY="$(echo "$API_KEY" | tr -d '[:space:]')"
 
